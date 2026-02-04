@@ -22,5 +22,7 @@ RUN uv pip install \
     bitsandbytes \
     --torch-backend=auto
 
-CMD ["/app/vllm-test/.venv/bin/python"]
+CMD ["tail", "-f", "/dev/null"]
+
+# CMD ["/app/vllm-test/.venv/bin/python"]
 # CMD ["/app/vllm-test/.venv/bin/python", "-m", "vllm.entrypoints.openai.api_server", "--host", "0.0.0.0","--port", "8000","--model", "mistralai/Mistral-7B-Instruct-v0.3","--tensor-parallel-size", "1","--max-model-len", "8192","--quantization", "bitsandbytes","--gpu-memory-utilization", "0.85","--max-num-seqs", "8","--max-num-batched-tokens", "2048","--enable-auto-tool-choice","--tool-call-parser", "mistral"]
