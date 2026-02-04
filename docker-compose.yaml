@@ -1,7 +1,7 @@
 services:
-  AI-Shell-Agent:
+  ai-shell-agent:
     build: .
-    container_name: AI-Shell-Agent-Container
+    container_name: ai-shell-agent-container
     environment:
       - NVIDIA_VISIBLE_DEVICES=all
       - NVIDIA_DRIVER_CAPABILITIES=compute,utility
