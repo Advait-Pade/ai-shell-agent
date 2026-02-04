@@ -7,7 +7,7 @@ services:
       - NVIDIA_DRIVER_CAPABILITIES=compute,utility
       - PORT=${PORT:-3000}
     ports:
-      - '${PORT:-3000}:80'
+      - '${PORT:-3000}:8000'
     volumes:
       - .cache:/root/.cache
     deploy:
