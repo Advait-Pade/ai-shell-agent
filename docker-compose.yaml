@@ -1,0 +1,18 @@
+services:
+  AI-Shell-Agent:
+    build: .
+    container_name: AI-Shell-Agent-Container
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all
+      - NVIDIA_DRIVER_CAPABILITIES=compute,utility
+      - PORT=${PORT:-3000}
+    ports:
+      - '${PORT:-3000}:80'
+    volumes:
+      - .cache:/root/.cache
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              capabilities: [gpu]

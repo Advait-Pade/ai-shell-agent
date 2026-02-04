@@ -63,7 +63,7 @@ while True:
     response = requests.post(
         API_URL,
         json={
-            "model": "Mistral-7B-v0.3",
+            "model" : "mistralai/Mistral-7B-Instruct-v0.3",
             "messages": messages,
             "tools" : tools,
             "tool_choice": "auto",
