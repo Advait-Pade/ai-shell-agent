@@ -9,7 +9,7 @@ services:
     ports:
       - '${PORT:-3000}:8000'
     volumes:
-      - .cache/huggingface:/root/.cache/huggingface
+      - .cache/huggingface:/app/vllm-test/.cache/huggingface
     ipc: host
     deploy:
       resources:
